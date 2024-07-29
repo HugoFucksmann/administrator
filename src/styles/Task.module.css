@@ -1,0 +1,97 @@
+.task-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+  margin: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.task-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-title {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.task-author {
+  font-size: 0.9em;
+  color: gray;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.view-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.start-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.ongoing-btn {
+  background-color: #ffc107;
+  color: white;
+}
+.task-group {
+  margin: 20px 0;
+}
+
+.task-group-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.task-group-title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.task-group-date {
+  font-size: 0.9em;
+  color: gray;
+}
+.tasks-page {
+  padding: 20px;
+}
+
+.tasks-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.add-group-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sort-by-select {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
