@@ -27,4 +27,6 @@ Sigue estos pasos para configurar y ejecutar la aplicación localmente:
 1. **Clona el repositorio:**
    ```bash
    git clone https://github.com/tu-usuario/task-project-manager.git
+    npm install
+    npm run dev
    ```
