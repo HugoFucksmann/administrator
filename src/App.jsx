@@ -1,25 +1,35 @@
 import React from "react";
-import { Provider } from "react-redux";
+import { Provider, useSelector } from "react-redux";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { store } from "./store";
 import { AuthProvider } from "./contexts/AuthContext";
 import Navigation from "./components/Navigation";
 import { ThemeProvider } from "styled-components";
-import theme from "./theme/Theme";
+import "./scrollbarStyle.css";
+import lightTheme from "./theme/lightTheme";
+import darkTheme from "./theme/darkTheme";
 
 const queryClient = new QueryClient();
 
+const ThemeWrapper = ({ children }) => {
+  const currentTheme = useSelector((state) => state.theme.currentTheme);
+
+  const theme = currentTheme === "light" ? lightTheme : darkTheme;
+
+  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+};
+
 const App = () => {
   return (
-    <ThemeProvider theme={theme}>
+    <Provider store={store}>
       <QueryClientProvider client={queryClient}>
-        <Provider store={store}>
+        <ThemeWrapper>
           <AuthProvider>
             <Navigation />
           </AuthProvider>
-        </Provider>
+        </ThemeWrapper>
       </QueryClientProvider>
-    </ThemeProvider>
+    </Provider>
   );
 };
 
